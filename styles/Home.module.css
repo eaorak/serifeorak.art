@@ -83,6 +83,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  display: relative;
 }
 
 .card:hover,
@@ -130,4 +131,6 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   margin-top: 15px;
+  display: absolute;
+  bottom: 0;
 }
