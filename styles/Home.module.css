@@ -61,16 +61,16 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 40%;
+  list-style: none;
 }
 
 .card {
@@ -108,9 +108,12 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+.price {
+  margin-bottom: 15px !important;
+}
+
+@media (max-width: 960px) {
   .grid {
-    width: 100%;
-    flex-direction: column;
+    flex-basis: calc(33.33% - 2rem);
   }
 }

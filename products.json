@@ -1,0 +1,23 @@
+[
+  {
+    "id": "prod_LHceTRjjy98PGk",
+    "title": "The Beloved",
+    "description": "The Beloved. The One. A classic style illumination artwork with Allah caligraphy.",
+    "image": "/../public/artwork/beloved01.jpeg",
+    "price": "350"
+  },
+  {
+    "id": "prod_LHcezwU4ntesBS",
+    "title": "Alacati",
+    "description": "Inspired by a beautiful Turkish coastal town named Alacati, this modern style artwork merges modern and classic styles.",
+    "image": "/../public/artwork/alacati01.jpeg",
+    "price": "275"
+  },
+  {
+    "id": "prod_LHchyCBUCqPUQV",
+    "title": "Bee",
+    "description": "This modern piece is inspired by bees and their beautiful relationship with flowers.",
+    "image": "/../public/artwork/bee01.jpeg",
+    "price": "225"
+  }
+]
