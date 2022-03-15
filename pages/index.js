@@ -2,9 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import products from "../products.json";
-import { initiateCheckout } from "../lib/payments";
+import useCart from "../hooks/use-cart";
 
 export default function Home() {
+  const { cart, addToCart, checkout } = useCart();
+
+  console.log("Cart: ", JSON.stringify(cart));
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,6 +20,15 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Hemdem Art</h1>
         <p className={styles.description}>Beautiful Illumination Artwork</p>
+        <p className={styles.description}>
+          <strong>Items: {Object.keys(cart.products).length}</strong>
+          <br />
+          <strong>Total cost: £{cart.total}</strong>
+          <br />
+          <button className={styles.button} onClick={() => checkout()}>
+            Checkout
+          </button>
+        </p>
         <section className={styles.grid}>
           {products.map(({ id, title, description, image, price }) => (
             <div className={styles.card} key={id}>
@@ -26,9 +39,9 @@ export default function Home() {
               </p>
               <p>{description}</p>
               <button
-                className={styles.button}
+                className={`${styles.button} ${cart.products[id] ? styles.disabled : ""}`}
                 onClick={() => {
-                  initiateCheckout({ lineItems: [{ price: id, quantity: 1 }] });
+                  addToCart({ id });
                 }}
               >
                 Buy
