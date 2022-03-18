@@ -1,8 +1,14 @@
 .nav {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 1em 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
 }
 
 .navTitle {
@@ -13,6 +19,7 @@
 
 .navCart {
   margin: 0;
+  display: flex;
 }
 
 .navCart svg {
@@ -20,10 +27,12 @@
 }
 
 .navCart button {
+  color: blueviolet;
   display: flex;
   align-items: center;
-  font-size: 1.2em;
+  font-size: 1.3em;
   background: none;
   padding: 0;
   border: 0;
+  cursor: pointer;
 }
